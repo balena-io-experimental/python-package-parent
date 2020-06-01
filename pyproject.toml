@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python-package-parent"
+version = "0.1.0"
+description = ""
+authors = ["Pranas Ziaukas <pranas@balena.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+python-package-child = {git = "https://github.com/balena-io-playground/python-package-child.git"}
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+greet = 'python_package_parent.introduction:child_greet'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
